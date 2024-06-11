@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Website</title>
+    <link rel="stylesheet" href="styles.css">
+<body>
+
+    <div class="hero">
+        <div class="navbar">
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Mymusic</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left">
+                <h1>Nouvel <br> Album <br> MUSIC</h1>
+            </div>
+            <div class="right">
+                <p>Cliquer Pour Ecouter</p>
+                <video id="video" width="320" height="240" controls>
+                    <source src="images/alpha.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        var video = document.getElementById("video");
+
+        video.onclick = function(){
+            if(video.paused){
+                video.play();
+            }else{
+                video.pause();
+            }
+        }
+    </script>
+
+</body>
+</html>
